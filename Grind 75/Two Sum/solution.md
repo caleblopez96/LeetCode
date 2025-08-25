@@ -16,15 +16,15 @@ for (let i = 0; i < nums.length; i++) {}
 for (let j = i + 1; i < nums.length; i++) {}
 ```
 
-3. for each pair (array[i], array[j]), check if their sum equals the targets
+3. Compare every unique pair of elements in the array (array[i], array[j]), check if their sum equals the targets
 
 ```typescript
 for (let i = 0; i < nums.length; i++) {
-  for (let j = i + 1; i < nums.length; i++) {}
+  for (let j = i + 1; i < nums.length; j++) {}
 }
 ```
 
-4. If the sum matches the target, return the two indices
+4. If the sum equals the target, return the two indices
 
 ```typescript
 if (nums[i] + nums[j] === target) {
@@ -43,7 +43,7 @@ FULL SOLUTION:
 ```typescript
 function twoSum(nums: number[], target: number): number[] {
   for (let i = 0; i < nums.length; i++) {
-    for (let j = i + 1; i < nums.length; i++) {
+    for (let j = i + 1; j < nums.length; i++) {
       if (nums[i] + nums[j] === target) {
         return [i, j];
       }
