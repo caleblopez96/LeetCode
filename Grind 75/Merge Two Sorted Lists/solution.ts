@@ -10,6 +10,7 @@
  * }
  */
 
+//@ts-ignore
 class ListNode {
     val: number;
     next: ListNode | null;
@@ -19,6 +20,7 @@ class ListNode {
     }
 }
 
+//@ts-ignore: Duplicate function name
 function mergeTwoLists(list1: ListNode | null, list2: ListNode | null): ListNode | null {
     let dummy = new ListNode();
     let tail = dummy;
