@@ -8,6 +8,5 @@ function twoSum(nums: number[], target: number): number[] {
             }
         }
     }
-    // if no values add up to target, return empty array
     return [];
 }
