@@ -9,29 +9,29 @@ reset() sets the current value to init and then returns it.
 */
 
 type Counter = {
-  increment: () => number;
-  decrement: () => number;
-  reset: () => number;
+    increment: () => number;
+    decrement: () => number;
+    reset: () => number;
 };
 
 //@ts-ignore: duplicate function name
 function createCounterII(init: number): Counter {
-  let current = init;
+    let current = init;
 
-  return {
-    increment: () => {
-      current++;
-      return current;
-    },
-    decrement: () => {
-      current--;
-      return current;
-    },
-    reset: () => {
-      current = init;
-      return current;
-    },
-  };
+    return {
+        increment: () => {
+            current++;
+            return current;
+        },
+        decrement: () => {
+            current--;
+            return current;
+        },
+        reset: () => {
+            current = init;
+            return current;
+        },
+    };
 }
 
 /**

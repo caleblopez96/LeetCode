@@ -11,16 +11,16 @@ type OnceFn = (...args: JSONValue[]) => JSONValue | undefined;
 
 //@ts-ignore: duplicate function name
 function once(fn: Function): OnceFn {
-  let hasBeenCalled: boolean = false;
-  let result;
-  return function (...args) {
-    if (hasBeenCalled) {
-      return;
-    }
-    result = fn(...args);
-    hasBeenCalled = true;
-    return result;
-  };
+    let hasBeenCalled: boolean = false;
+    let result;
+    return function (...args) {
+        if (hasBeenCalled) {
+            return;
+        }
+        result = fn(...args);
+        hasBeenCalled = true;
+        return result;
+    };
 }
 
 /**
