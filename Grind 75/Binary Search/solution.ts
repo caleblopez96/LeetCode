@@ -50,7 +50,7 @@ function search(nums: number[], target: number): number {
 
     while (left <= right) {
         let middle: number = Math.floor((left + right) / 2);
-        if (middle === target) {
+        if (nums[middle] === target) {
             return middle;
         } else if (target > middle) {
             left = middle + 1;
