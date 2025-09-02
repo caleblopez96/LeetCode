@@ -6,7 +6,6 @@ function search(nums: number[], target: number): number {
     while (left <= right) {
         // while there’s still a range to search
         let mid = Math.floor((left + right) / 2); // middle index
-
         if (nums[mid] === target) {
             // found it
             return mid;
@@ -49,13 +48,13 @@ function search(nums: number[], target: number): number {
     let right: number = nums.length - 1;
 
     while (left <= right) {
-        let middle: number = Math.floor((left + right) / 2);
-        if (nums[middle] === target) {
-            return middle;
-        } else if (target > middle) {
-            left = middle + 1;
+        let mid: number = Math.floor((left + right) / 2);
+        if (nums[mid] === target) {
+            return mid;
+        } else if (nums[mid] < target) {
+            left = mid + 1;
         } else {
-            right = middle - 1;
+            right = mid - 1;
         }
     }
     return -1;
